@@ -1,0 +1,48 @@
+<html ng-app="app">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Spark Mail Server</title>
+
+    <!-- Bootstrap -->
+    <link href="js/jquery-ui.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrapTheme.min.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+</head>
+<body ng-controller="appController">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#/home">SparkMail</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-primary my-2 my-sm-0" ng-click="logout()">Logout</button>
+        </form>
+    </div>
+</nav>
+<div align="center">
+    <div ui-view class="container"></div>
+</div>
+
+<!-- Imports START -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<!-- Imports END -->
+<!-- Angular Components -->
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/controller.js"></script>
+<script type="text/javascript" src="app/login/controller.js"></script>
+<script type="text/javascript" src="app/login/service.js"></script>
+<script type="text/javascript" src="app/register/controller.js"></script>
+<script type="text/javascript" src="app/register/service.js"></script>
+<script type="text/javascript" src="app/home/controller.js"></script>
+<script type="text/javascript" src="app/home/service.js"></script>
+</body>
+</html>

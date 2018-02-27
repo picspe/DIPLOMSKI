@@ -1,0 +1,13 @@
+
+<h2> Welcome to JavaSpark Mail</h2>
+<h4> Please Sign In</h4>
+<form name="loginForm">
+    <hr>
+    <label>Email * </label>
+    <input class="form-control" type="text" required ng-model="user.email"/>
+    <label>Password * </label>
+    <input class="form-control" type="password" required  ng-model="user.password"/>
+    <hr>
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="login(user)">SIGN IN</button>
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="register()">REGISTER</button>
+</form>

@@ -1,0 +1,21 @@
+
+    <h2> Welcome to JavaSpark Mail</h2>
+    <h4> Your Email Will Be In Form: username@sparkmail.com</h4>
+    <form name="registerForm">
+        <hr>
+        <label>Username:</label>
+        <input class="form-control" type="text" name="userName" required ng-model="user.email"/>
+        <label>First Name:</label>
+        <input class="form-control" type="text" name="userName" required ng-model="user.firstname"/>
+        <label>Last Name: </label>
+        <input class="form-control" type="text" name="userLastName" required ng-model="user.lastname"/>
+        <label>Password: </label>
+        <input class="form-control" type="password" name="userPassword" required  ng-model="user.password"/>
+        <label>Repeat Password: </label>
+        <input class="form-control" type="password" name="userRepeatPassword" required  ng-model="user.repeatPassword"/>
+        <hr>
+        <button type="submit" class="btn btn-primary btn-lg" ng-click="registerForm.userName.$valid
+                                                                && registerForm.userLastName.$valid
+                                                                && registerForm.userPassword.$valid
+                                                                && registerForm.userRepeatPassword.$valid && register(user)">REGISTER</button>
+    </form>

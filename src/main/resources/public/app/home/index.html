@@ -1,0 +1,93 @@
+<div id="mySidenav" class="sidenav">
+    <ul class="list-group">
+        <li class="list-group-item" ng-click="sendNewToggle()"> <button class="btn btn-default btn-block" >Send New</button></li>
+        <li class="list-group-item" ng-click="inboxToggle()"> <button class="btn btn-default btn-block" >Inbox</button></li>
+        <li class="list-group-item" ng-click="outboxToggle()"> <button class="btn btn-default btn-block" >Outbox</button></li>
+    </ul>
+</div>
+
+<div id="inboxnav" class="meesagenav hidden">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="message in messages" ng-click="openInboxMail(message)">{{message.senderMail}} <br> {{message.subject}}</li>
+    </ul>
+</div>
+
+<div id="outboxnav" class="meesagenav hidden">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="message in messages" ng-click="openOutboxMail(message)">{{message.senderMail}} <br> {{message.subject}}</li>
+    </ul>
+</div>
+
+<div class="card new-mail hidden">
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <td> <label> To : </label> <input class="form-control message-form email-input"  autocomplete="off" style="margin-left: 40px" type="text" ng-model="newMail.receiverMail"/></td>
+            </tr>
+            <tr>
+                <td> <label> Cc : </label> <input class="form-control message-form email-input" style="margin-left: 40px" type="text" ng-model="newMail.cc"/></td>
+            </tr>
+            <tr>
+                <td> <label> Subject : </label> <input class="form-control message-form" style="margin-left: 5px" type="text" ng-model="newMail.subject"/></td>
+            </tr>
+            <tr>
+                <td> <textarea class="form-control" type="text" ng-model="newMail.message"/></td>
+            </tr>
+            <tr>
+                <td> <button class="btn btn-primary">SEND</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="card inbox hidden">
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <td> <label> From : </label> <input class="form-control received-mail message-form" readonly style="margin-left: 20px" type="text" ng-model="inboxMail.senderMail"/></td>
+            </tr>
+            <tr>
+                <td> <label> Cc : </label> <input class="form-control received-mail message-form" readonly style="margin-left: 40px" type="text" ng-model="inboxMail.cc"/></td>
+            </tr>
+            <tr>
+                <td> <label> Subject : </label> <input class="form-control received-mail message-form" readonly style="margin-left: 5px" type="text" ng-model="inboxMail.subject"/></td>
+            </tr>
+            <tr>
+                <td> <textarea class="form-control" type="text" readonly ng-model="inboxMail.message"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn btn-primary" ng-click="reply(inboxMail)">Reply</button>
+                    <button class="btn btn-primary" ng-click="forward(inboxMail)">Forward</button>
+                    <button class="btn btn-primary" ng-click="delete(inboxMail)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="card outbox hidden" >
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <td> <label> To : </label> <input class="form-control message-form" style="margin-left: 40px" type="text" ng-model="outboxMail.receiverMail"/></td>
+            </tr>
+            <tr>
+                <td> <label> Cc : </label> <input class="form-control message-form" style="margin-left: 40px" type="text" ng-model="outboxMail.cc"/></td>
+            </tr>
+            <tr>
+                <td> <label> Subject : </label> <input class="form-control message-form" style="margin-left: 5px" type="text" ng-model="outboxMail.subject"/></td>
+            </tr>
+            <tr>
+                <td> <textarea class="form-control" type="text" readonly ng-model="outboxMail.message"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn btn-primary" ng-click="forward(outboxMail)">Forward</button>
+                    <button class="btn btn-primary" ng-click="delete(outboxMail)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
