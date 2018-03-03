@@ -1,0 +1,11 @@
+main\models\Chat.class
+main\SparkMainApp.class
+main\models\User.class
+models\TestModel.class
+models\TestModelRepo.class
+main\dao\MessageRepository.class
+main\models\Message.class
+main\controllers\UserController.class
+main\dao\UserRepository.class
+main\utils\ObjectMapper.class
+main\controllers\MessageController.class
