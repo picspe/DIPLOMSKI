@@ -6,7 +6,6 @@
   <name>JavaSparkMail</name>
   <description>GraduationProject</description>
   <packaging>jar</packaging>
-  
   <dependencies>
 	 <dependency>
 	    <groupId>com.sparkjava</groupId>

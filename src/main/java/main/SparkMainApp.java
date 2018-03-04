@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import spark.Spark;
 
+import static spark.Spark.port;
+
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
@@ -21,6 +23,14 @@ public class SparkMainApp {
 
 
 	public static void main(String[] args) {
+		ProcessBuilder process = new ProcessBuilder();
+		int port;
+		if (process.environment().get("PORT") != null) {
+			port = Integer.parseInt(process.environment().get("PORT"));
+		} else {
+			port = 4567;
+		}
+		port(port);
 
 		BasicConfigurator.configure();
 		// TODO change this to Spark.staticFiles.location("/public");
