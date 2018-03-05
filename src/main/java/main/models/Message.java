@@ -27,6 +27,8 @@ public class Message {
     private String subject;
     @Column(nullable = true)
     private String cc;
+    @Column(nullable = false)
+    private Boolean seen;
 
     public Message(){};
     public Message(String message, Timestamp date, String senderMail, String receiverMail) {
@@ -35,6 +37,7 @@ public class Message {
         this.date = date;
         this.senderMail = senderMail;
         this.receiverMail = receiverMail;
+        this.seen = false;
     }
 
     public String getSenderMail() {
@@ -75,5 +78,29 @@ public class Message {
 
     public void setDate(Timestamp date) {
         this.date = date;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getCc() {
+        return cc;
+    }
+
+    public void setCc(String cc) {
+        this.cc = cc;
+    }
+
+    public Boolean getSeen() {
+        return seen;
+    }
+
+    public void setSeen(Boolean seen) {
+        this.seen = seen;
     }
 }

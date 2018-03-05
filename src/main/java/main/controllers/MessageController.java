@@ -25,17 +25,6 @@ public class MessageController {
     }
 
     private void setupRoutes(){
-        post(controllerPath + "/send", (request, response) -> {
-            Message newMessage = objectMapper.mapFromJson(request.body(), Message.class);
-            if (newMessage != null) {
-                messageRepository.save(newMessage);
-                response.status(200);
-                return objectMapper.mapToJson(newMessage);
-            } else {
-                response.status(400);
-                return "Error";
-            }
-        });
 
         get(controllerPath + "/inbox", (request, response) -> {
             String user = request.session().attribute("user");
@@ -52,7 +41,7 @@ public class MessageController {
             String user = request.session().attribute("user");
             if(user != null) {
                 Collection<Message> outbox = messageRepository.findAllBySenderMail(user);
-                return outbox;
+                return objectMapper.mapToJson(outbox);
             } else {
                 response.status(400);
                 return "Please sign in!";

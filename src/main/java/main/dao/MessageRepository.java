@@ -8,4 +8,5 @@ import java.util.Collection;
 public interface MessageRepository extends CrudRepository<Message, Long>{
     Collection<Message> findAllByReceiverMail(String receiverMail);
     Collection<Message> findAllBySenderMail(String senderMail);
+    Collection<Message> findAllByCc(String cc);
 }

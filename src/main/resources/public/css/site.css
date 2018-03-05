@@ -78,3 +78,8 @@ textarea {
 .new-mail {
     left:200px;
 }
+
+.email-input {
+    width:500px;
+    max-width: 500px;
+}

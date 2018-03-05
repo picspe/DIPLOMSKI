@@ -2,12 +2,13 @@
     <ul class="list-group">
         <li class="list-group-item" ng-click="sendNewToggle()"> <button class="btn btn-default btn-block" >Send New</button></li>
         <li class="list-group-item" ng-click="inboxToggle()"> <button class="btn btn-default btn-block" >Inbox</button></li>
-        <li class="list-group-item" ng-click="outboxToggle()"> <button class="btn btn-default btn-block" >Outbox</button></li>
+        <li class="list-group-item" ng-click="outboxToggle()"> <button class="btn btn-default btn-block" >Sent Items</button></li>
     </ul>
 </div>
 
 <div id="inboxnav" class="meesagenav hidden">
     <ul class="list-group">
+        <li class="list-group-item"> <input type="text" placeholder="filter messages" class="form-control" ng-model="filter"/></li>
         <li class="list-group-item" ng-repeat="message in messages" ng-click="openInboxMail(message)">{{message.senderMail}} <br> {{message.subject}}</li>
     </ul>
 </div>
@@ -22,10 +23,10 @@
     <div class="card-body">
         <table class="table">
             <tr>
-                <td> <label> To : </label> <input class="form-control message-form email-input"  autocomplete="off" style="margin-left: 40px" type="text" ng-model="newMail.receiverMail"/></td>
+                <td> <label> To : </label> <input class="form-control message-form email-input" id="receiver"  autocomplete="off" style="margin-left: 40px" type="text" ng-model="newMail.receiverMail"/></td>
             </tr>
             <tr>
-                <td> <label> Cc : </label> <input class="form-control message-form email-input" style="margin-left: 40px" type="text" ng-model="newMail.cc"/></td>
+                <td> <label> Cc : </label> <input class="form-control message-form email-input" id="ccs" style="margin-left: 40px" type="text" ng-model="newMail.cc"/></td>
             </tr>
             <tr>
                 <td> <label> Subject : </label> <input class="form-control message-form" style="margin-left: 5px" type="text" ng-model="newMail.subject"/></td>
@@ -34,7 +35,7 @@
                 <td> <textarea class="form-control" type="text" ng-model="newMail.message"/></td>
             </tr>
             <tr>
-                <td> <button class="btn btn-primary">SEND</button></td>
+                <td> <button class="btn btn-primary" ng-click="send(newMail)">SEND</button></td>
             </tr>
         </table>
     </div>

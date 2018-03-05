@@ -10,4 +10,5 @@ import java.util.Collection;
 public interface UserRepository extends CrudRepository<User, Long> {
     User findOneByEmail(String email);
     Collection<User> findTop10ByEmailContaining(String email);
+    Boolean existsByEmail(String email);
 }

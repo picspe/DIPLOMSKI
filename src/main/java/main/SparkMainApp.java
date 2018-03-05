@@ -8,7 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
+
+import org.eclipse.jetty.websocket.api.Session;
 import spark.Spark;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static spark.Spark.port;
 
@@ -19,11 +24,11 @@ import static spark.Spark.port;
 @EnableScheduling
 public class SparkMainApp {
 	public static String controllerPath = "/loginController";
-
-
+	private static Map<Session, String> users;
 
 	public static void main(String[] args) {
 		ProcessBuilder process = new ProcessBuilder();
+		users = new ConcurrentHashMap<>();
 		int port;
 		if (process.environment().get("PORT") != null) {
 			port = Integer.parseInt(process.environment().get("PORT"));
@@ -38,5 +43,32 @@ public class SparkMainApp {
 		SpringApplication.run(SparkMainApp.class, args);
 
 	}
+
+	public static Map<Session, String> getUsers() {
+		if(users == null) {
+			users = new ConcurrentHashMap<>();
+		}
+		return users;
+	}
+
+	public static void loginUser(Session session, String username) {
+		getUsers().put(session, username);
+	}
+
+	public static void logoutUser(Session session) {
+		getUsers().remove(session);
+	}
+
+	public static void broadcastMessage(String receiver) {
+
+	}
+
+
+
+
+
+
+
+
 
 }

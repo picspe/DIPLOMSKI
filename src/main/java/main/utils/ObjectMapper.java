@@ -21,4 +21,13 @@ public class ObjectMapper {
     public String mapToJson(Object object) {
         return this.gson.toJson(object);
     }
+
+    public <T> T copy(T object, Class<T> type) {
+        try {
+            return gson.fromJson(gson.toJson(object, type), type);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

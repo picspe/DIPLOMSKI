@@ -12,7 +12,7 @@ angular.module('home.services',[])
         };
 
         this.send = function(mail) {
-            return $http.post(msgPath + "/send");
+            return $http.post(path + "/send",mail);
         };
 
         this.forward = function(mail) {
