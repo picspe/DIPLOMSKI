@@ -118,5 +118,11 @@ angular.module('home.controllers', [])
                 $scope.newMail.subject = "RE: " + $scope.newMail.subject;
                 $scope.sendNewToggle();
             };
+
+            $scope.delete = function (mail) {
+                homeService.delete(mail).then(function() {
+                    $window.location.reload();
+                })
+            };
         }]
     );

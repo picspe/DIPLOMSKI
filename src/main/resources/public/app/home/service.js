@@ -33,10 +33,14 @@ angular.module('home.services',[])
 
         this.getTopTen = function(username) {
             return $http.get(path + "/search/" + username);
-        }
+        };
 
         this.seen = function(message) {
             return $http.post(msgPath + "/seen", message);
+        };
+
+        this.delete = function(message) {
+            return $http.post(msgPath + "/delete", message);
         }
 
 }]);

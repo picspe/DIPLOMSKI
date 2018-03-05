@@ -55,5 +55,11 @@ public class MessageController {
             return "Seen";
         }));
 
+        post( controllerPath + "/delete" , ((request, response) -> {
+            Message message = objectMapper.mapFromJson(request.body(), Message.class);
+            messageRepository.delete(message.getId());
+            return "Ok";
+        }));
+
     }
 }
