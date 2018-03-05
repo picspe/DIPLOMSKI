@@ -35,4 +35,8 @@ angular.module('home.services',[])
             return $http.get(path + "/search/" + username);
         }
 
+        this.seen = function(message) {
+            return $http.post(msgPath + "/seen", message);
+        }
+
 }]);

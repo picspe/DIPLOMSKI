@@ -43,6 +43,8 @@ angular.module('home.controllers', [])
                 $('.card').addClass('hidden');
                 $scope.inboxMail = message;
                 $('.inbox').removeClass('hidden');
+                homeService.seen(message);
+                message.seen = true;
             };
 
             $scope.openOutboxMail = function (message) {
@@ -59,10 +61,11 @@ angular.module('home.controllers', [])
                         mail.receiverMail = receivers[i];
                         homeService.send(mail).then(function (response) {
                             $scope.messages = response.data;
+                            $window.location.reload();
                         }, function(response) {
-                            alert(response.data)
-                        })
-                        $window.location.reload();
+                            alert(response.data);
+                            $window.location.reload();
+                        });
                     }
                 }
             };
@@ -83,8 +86,7 @@ angular.module('home.controllers', [])
                             return obj.email;
                         });
                         // delegate back to autocomplete, but extract the last term
-                        response($.ui.autocomplete.filter(
-                            $scope.userList, searchTerm));
+                        response($.ui.autocomplete.filter($scope.userList, searchTerm));
                     });
                 },
                 focus: function () {
@@ -107,14 +109,13 @@ angular.module('home.controllers', [])
             $scope.forward = function (mail) {
                 $scope.newMail = Object.assign({}, mail);
                 $scope.newMail.subject = "FW: " + $scope.newMail.subject;
-                $scope.newMail.message = "Forwarder from: " + mail.senderMail + "\n" + $scope.newMail.message;
+                $scope.newMail.message = "Forwarder from: " + mail.senderMail + "\nMessage: \"" + $scope.newMail.message + "\"";
                 $scope.sendNewToggle();
             };
 
             $scope.reply = function (mail) {
                 $scope.newMail = Object.assign({}, mail);
                 $scope.newMail.subject = "RE: " + $scope.newMail.subject;
-                $scope.newMail.message = "Reply from: " + mail.senderMail + "\n" + $scope.newMail.message;
                 $scope.sendNewToggle();
             };
         }]

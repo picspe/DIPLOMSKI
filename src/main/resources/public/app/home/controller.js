@@ -43,6 +43,8 @@ angular.module('home.controllers', [])
                 $('.card').addClass('hidden');
                 $scope.inboxMail = message;
                 $('.inbox').removeClass('hidden');
+                homeService.seen(message);
+                message.seen = true;
             };
 
             $scope.openOutboxMail = function (message) {

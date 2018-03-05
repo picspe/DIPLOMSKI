@@ -9,13 +9,13 @@
 <div id="inboxnav" class="meesagenav hidden">
     <ul class="list-group">
         <li class="list-group-item"> <input type="text" placeholder="filter messages" class="form-control" ng-model="filter"/></li>
-        <li class="list-group-item" ng-repeat="message in messages" ng-click="openInboxMail(message)">{{message.senderMail}} <br> {{message.subject}}</li>
+        <li class="list-group-item" ng-repeat="message in messages" ng-class="{'seen' : !message.seen}" ng-click="openInboxMail(message)">{{message.senderMail}} <br> {{message.subject}}</li>
     </ul>
 </div>
 
 <div id="outboxnav" class="meesagenav hidden">
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="message in messages" ng-click="openOutboxMail(message)">{{message.senderMail}} <br> {{message.subject}}</li>
+        <li class="list-group-item" ng-repeat="message in messages" ng-click="openOutboxMail(message)">{{message.receiverMail}} <br> {{message.subject}}</li>
     </ul>
 </div>
 

@@ -83,3 +83,7 @@ textarea {
     width:500px;
     max-width: 500px;
 }
+
+.seen {
+    background-color: #f0f0f0;
+}

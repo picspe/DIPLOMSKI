@@ -47,5 +47,13 @@ public class MessageController {
                 return "Please sign in!";
             }
         });
+
+        post( controllerPath + "/seen" , ((request, response) -> {
+            Message message = objectMapper.mapFromJson(request.body(), Message.class);
+            message.setSeen(true);
+            messageRepository.save(message);
+            return "Seen";
+        }));
+
     }
 }
