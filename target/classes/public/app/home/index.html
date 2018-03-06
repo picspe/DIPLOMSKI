@@ -8,14 +8,15 @@
 
 <div id="inboxnav" class="meesagenav hidden">
     <ul class="list-group">
-        <li class="list-group-item"> <input type="text" placeholder="filter messages" class="form-control" ng-model="filter"/></li>
-        <li class="list-group-item" ng-repeat="message in messages" ng-class="{'seen' : !message.seen}" ng-click="openInboxMail(message)">{{message.senderMail}} <br> {{message.subject}}</li>
+        <li class="list-group-item"> <input type="text" placeholder="filter messages" class="form-control" ng-model="filterInbox"/></li>
+        <li class="list-group-item" ng-repeat="message in messages | filter : filterInbox | orderBy : '-date'" ng-class="{'seen' : !message.seen}" ng-click="openInboxMail(message)">{{message.senderMail}} <br> {{message.subject}} <br> {{message.date}}</li>
     </ul>
 </div>
 
 <div id="outboxnav" class="meesagenav hidden">
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="message in messages" ng-click="openOutboxMail(message)">{{message.receiverMail}} <br> {{message.subject}}</li>
+        <li class="list-group-item"> <input type="text" placeholder="filter messages" class="form-control" ng-model="filterOutbox"/></li>
+        <li class="list-group-item" ng-repeat="message in messages | filter : filterOutbox | orderBy : '-date'" ng-click="openOutboxMail(message)">{{message.receiverMail}} <br> {{message.subject}} <br> {{message.date}}</li>
     </ul>
 </div>
 
@@ -29,7 +30,7 @@
                 <td> <label> Cc : </label> <input class="form-control message-form email-input" id="ccs" style="margin-left: 40px" type="text" ng-model="newMail.cc"/></td>
             </tr>
             <tr>
-                <td> <label> Subject : </label> <input class="form-control message-form" style="margin-left: 5px" type="text" ng-model="newMail.subject"/></td>
+                <td> <label> Subject : </label> <input class="form-control message-form email-input" style="margin-left: 5px" type="text" ng-model="newMail.subject"/></td>
             </tr>
             <tr>
                 <td> <textarea class="form-control" type="text" ng-model="newMail.message"/></td>
@@ -45,13 +46,13 @@
     <div class="card-body">
         <table class="table">
             <tr>
-                <td> <label> From : </label> <input class="form-control received-mail message-form" readonly style="margin-left: 20px" type="text" ng-model="inboxMail.senderMail"/></td>
+                <td> <label> From : </label> <input class="form-control received-mail message-form email-input" readonly style="margin-left: 20px" type="text" ng-model="inboxMail.senderMail"/></td>
             </tr>
             <tr>
-                <td> <label> Cc : </label> <input class="form-control received-mail message-form" readonly style="margin-left: 40px" type="text" ng-model="inboxMail.cc"/></td>
+                <td> <label> Cc : </label> <input class="form-control received-mail message-form email-input" readonly style="margin-left: 40px" type="text" ng-model="inboxMail.cc"/></td>
             </tr>
             <tr>
-                <td> <label> Subject : </label> <input class="form-control received-mail message-form" readonly style="margin-left: 5px" type="text" ng-model="inboxMail.subject"/></td>
+                <td> <label> Subject : </label> <input class="form-control received-mail message-form email-input" readonly style="margin-left: 5px" type="text" ng-model="inboxMail.subject"/></td>
             </tr>
             <tr>
                 <td> <textarea class="form-control" type="text" readonly ng-model="inboxMail.message"/></td>
@@ -71,13 +72,13 @@
     <div class="card-body">
         <table class="table">
             <tr>
-                <td> <label> To : </label> <input class="form-control message-form" style="margin-left: 40px" type="text" ng-model="outboxMail.receiverMail"/></td>
+                <td> <label> To : </label> <input class="form-control message-form email-input" style="margin-left: 40px" type="text" ng-model="outboxMail.receiverMail"/></td>
             </tr>
             <tr>
-                <td> <label> Cc : </label> <input class="form-control message-form" style="margin-left: 40px" type="text" ng-model="outboxMail.cc"/></td>
+                <td> <label> Cc : </label> <input class="form-control message-form email-input" style="margin-left: 40px" type="text" ng-model="outboxMail.cc"/></td>
             </tr>
             <tr>
-                <td> <label> Subject : </label> <input class="form-control message-form" style="margin-left: 5px" type="text" ng-model="outboxMail.subject"/></td>
+                <td> <label> Subject : </label> <input class="form-control message-form email-input" style="margin-left: 5px" type="text" ng-model="outboxMail.subject"/></td>
             </tr>
             <tr>
                 <td> <textarea class="form-control" type="text" readonly ng-model="outboxMail.message"/></td>

@@ -109,13 +109,14 @@ angular.module('home.controllers', [])
             $scope.forward = function (mail) {
                 $scope.newMail = Object.assign({}, mail);
                 $scope.newMail.subject = "FW: " + $scope.newMail.subject;
-                $scope.newMail.message = "Forwarder from: " + mail.senderMail + "\nMessage: \"" + $scope.newMail.message + "\"";
+                $scope.newMail.message = "Forwarder from: " + mail.senderMail + "\nMessage: \"" + $scope.newMail.message + "\"\n\n";
                 $scope.sendNewToggle();
             };
 
             $scope.reply = function (mail) {
                 $scope.newMail = Object.assign({}, mail);
                 $scope.newMail.subject = "RE: " + $scope.newMail.subject;
+                $scope.newMail.message = "From: " + mail.senderMail + "\nMessage: \"" + mail.message + "\"\n\n";
                 $scope.sendNewToggle();
             };
 

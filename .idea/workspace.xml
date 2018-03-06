@@ -3,66 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2464e264-529e-4791-9f68-86b162b309e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/controllers/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/main/controllers/MessageController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/main/controllers/UserController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/app/home/controller.js" afterPath="$PROJECT_DIR$/src/main/resources/public/app/home/controller.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/app/home/service.js" afterPath="$PROJECT_DIR$/src/main/resources/public/app/home/service.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/SparkMainApp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/controllers/MessageController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/controllers/UserController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/dao/MessageRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/dao/UserRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/models/Chat.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/models/Message.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/models/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/utils/ObjectMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/utils/WebSocketHelper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/TestModel.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/TestModelRepo.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/app.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/controller.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/home/controller.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/home/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/home/service.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/login/controller.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/login/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/login/service.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/register/controller.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/register/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/app/register/service.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap-theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap-theme.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap-theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/bootstrapTheme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/site.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/angular-ui-router.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/angular.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.structure.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.structure.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-ui.theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/js/npm.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/pepic-0.0.1-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/pepic-0.0.1-SNAPSHOT.jar.original" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/app/home/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/app/home/index.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/controllers/UserController.class" afterPath="$PROJECT_DIR$/target/classes/main/controllers/UserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/app/home/controller.js" afterPath="$PROJECT_DIR$/target/classes/public/app/home/controller.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/app/home/index.html" afterPath="$PROJECT_DIR$/target/classes/public/app/home/index.html" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change beforePath="$PROJECT_DIR$/target/pepic-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/pepic-0.0.1-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/target/pepic-0.0.1-SNAPSHOT.jar.original" afterPath="$PROJECT_DIR$/target/pepic-0.0.1-SNAPSHOT.jar.original" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,28 +26,28 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="123" column="46" lean-forward="false" selection-start-line="123" selection-start-column="46" selection-end-line="123" selection-end-column="46" />
+            <state relative-caret-position="2006">
+              <caret line="118" column="110" lean-forward="false" selection-start-line="118" selection-start-column="110" selection-end-line="118" selection-end-column="110" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="service.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
+            <state relative-caret-position="714">
               <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="122" column="29" lean-forward="false" selection-start-line="122" selection-start-column="29" selection-end-line="122" selection-end-column="29" />
+            <state relative-caret-position="310">
+              <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -147,8 +96,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="68" />
+            <state relative-caret-position="544">
+              <caret line="32" column="99" lean-forward="false" selection-start-line="32" selection-start-column="99" selection-end-line="32" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -192,8 +141,8 @@
       <find>receiver_mail</find>
       <find>sender</find>
       <find>split</find>
-      <find>delete</find>
       <find>send</find>
+      <find>delete</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -236,12 +185,12 @@
         <option value="$PROJECT_DIR$/src/main/java/main/models/Message.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/main/dao/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/controllers/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/app/home/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/public/css/site.css" />
         <option value="$PROJECT_DIR$/src/main/java/main/controllers/MessageController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/app/home/service.js" />
         <option value="$PROJECT_DIR$/src/main/resources/public/app/home/controller.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/app/home/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/main/controllers/UserController.java" />
       </list>
     </option>
   </component>
@@ -646,12 +595,12 @@
       <workItem from="1519471823306" duration="22064000" />
       <workItem from="1519762596556" duration="4687000" />
       <workItem from="1520123301346" duration="2695000" />
-      <workItem from="1520126808574" duration="19305000" />
+      <workItem from="1520126808574" duration="21431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88401000" />
+    <option name="totallyTimeSpent" value="90527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1046,14 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="122" column="29" lean-forward="false" selection-start-line="122" selection-start-column="29" selection-end-line="122" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -1070,26 +1011,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="62" column="68" lean-forward="false" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="68" />
+        <state relative-caret-position="714">
+          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="123" column="46" lean-forward="false" selection-start-line="123" selection-start-column="46" selection-end-line="123" selection-end-column="46" />
+        <state relative-caret-position="2006">
+          <caret line="118" column="110" lean-forward="false" selection-start-line="118" selection-start-column="110" selection-end-line="118" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/service.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/app/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        <state relative-caret-position="544">
+          <caret line="32" column="99" lean-forward="false" selection-start-line="32" selection-start-column="99" selection-end-line="32" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
           <folding />
         </state>
       </provider>

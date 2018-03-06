@@ -86,6 +86,7 @@ public class UserController {
 
         post(controllerPath + "/send", (request, response) -> {
             Message newMessage = objectMapper.mapFromJson(request.body(), Message.class);
+            newMessage.setId(null);
             if(newMessage.getReceiverMail() == null || newMessage.getReceiverMail().isEmpty()) {
                 response.status(404);
                 return "User not found";
