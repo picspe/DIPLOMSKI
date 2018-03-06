@@ -5,7 +5,9 @@ angular.module('home.controllers', [])
             $scope.newMessageCount = 0;
 
             homeService.isLoggedIn().then(function () {
+                $rootScope.loggedIn = true;
             }, function () {
+                $rootScope.loggedIn = false;
                 $state.go('login');
             });
 
