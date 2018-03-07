@@ -11,6 +11,7 @@ angular.module('home.controllers', [])
                 $state.go('login');
             });
 
+
             $scope.logout = function () {
                 homeService.logout();
             };
@@ -110,16 +111,26 @@ angular.module('home.controllers', [])
 
             $scope.forward = function (mail) {
                 $scope.newMail = Object.assign({}, mail);
+                $scope.newMail.receiverMail = "";
                 $scope.newMail.subject = "FW: " + $scope.newMail.subject;
-                $scope.newMail.message = "Forwarder from: " + mail.senderMail + "\nMessage: \"" + $scope.newMail.message + "\"\n\n";
+                $scope.newMail.message ="\n" +
+                    "______________ Forwarded message ______________\n" +
+                    "From: " + mail.senderMail + "\n" +
+                    "Date: " + mail.date + "\n" +
+                    "Subject: " + mail.subject + "\n" +
+                    "To : " + mail.receiverMail + "\n" +
+                    "Message : " + mail.message + "\n " +
+                    "__________________________________________________\n";
                 $scope.sendNewToggle();
+                $("#receiver").focus();
             };
 
             $scope.reply = function (mail) {
                 $scope.newMail = Object.assign({}, mail);
                 $scope.newMail.subject = "RE: " + $scope.newMail.subject;
-                $scope.newMail.message = "From: " + mail.senderMail + "\nMessage: \"" + mail.message + "\"\n\n";
+                $scope.newMail.message = "From: " + mail.senderMail + "\nMessage: \"" + mail.message + "\"\n\nReply: ";
                 $scope.sendNewToggle();
+                $("#messageBox").focus();
             };
 
             $scope.delete = function (mail) {

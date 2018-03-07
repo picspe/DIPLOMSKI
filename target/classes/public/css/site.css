@@ -18,7 +18,7 @@ label {
 
 .sidenav {
     width: 200px;
-    position: fixed;
+    position: absolute;
     left: 0;
     overflow-x: hidden;
     border: #f5f5f5 3px solid;
@@ -26,10 +26,11 @@ label {
 
 .meesagenav {
     width: 200px;
-    position: fixed;
+    position: absolute;
     left: 200px;
     overflow-x: hidden;
     border: #f5f5f5 3px solid;
+    max-height: 785px;
 }
 
 .list-group-item:hover {
@@ -86,4 +87,8 @@ textarea {
 
 .seen {
     background-color: #f0f0f0;
+}
+
+#messageBox {
+    padding: 20px;
 }
